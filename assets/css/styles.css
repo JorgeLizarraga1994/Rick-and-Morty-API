@@ -8,19 +8,35 @@ body{
     text-align: center;
     margin: 30px auto; 
     background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
+
 
 #resultado {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 0.1fr);
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 30px;
 }
-.card{
-    border-radius: 50px;
+.cards{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
 }
-.card:hover{
-    transform: scale(1.1);
-    box-shadow: 10px grey;
+
+.card-image{
+    border-top-left-radius: calc(1.25rem - 1px);
+    border-top-right-radius: calc(1.25rem - 1px);
+}
+.cards:hover{
+    transform: scale(1.02);
 }
