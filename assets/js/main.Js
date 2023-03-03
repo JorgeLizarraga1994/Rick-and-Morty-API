@@ -8,7 +8,7 @@ const apiRickPersonajes = async (pagina) =>{
     data.results.map(item=>{
         divItem = document.createElement('div')
         divItem.innerHTML = `
-        <div class="cards">
+        <div class="cards" id= "ocultar">
             <img src="${item.image}" class="card-image" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5>
@@ -17,10 +17,11 @@ const apiRickPersonajes = async (pagina) =>{
                 <p class="card-text">${item.gender}</p>
             </div>
         </div>`
-
         divRes.appendChild(divItem);
     });
 }
+
+
 
 const apiRickEpisodios = async (pagina) =>{
     let url = "https://rickandmortyapi.com/api/episode/?page="+pagina;
@@ -54,7 +55,7 @@ const apiRickLocaciones = async (pagina) =>{
     data.results.map(item=>{
         divItem = document.createElement('div')
         divItem.innerHTML = `
-        <div class="cards">
+        <div class="cards" id= "pagina">
             <div class="card-body">
                 <h5 class="card-title">location ${item.id}</h5>
                 <p class="card-text">${item.name}</p>
@@ -66,5 +67,8 @@ const apiRickLocaciones = async (pagina) =>{
         divRes.appendChild(divItem);
     })
 }
+
+
+
 
 

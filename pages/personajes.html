@@ -7,14 +7,10 @@
     <title>The Rick And Morty</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <center>
-        <h1 class="text-white">The Rick And Morty API</h1>
-    </center>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">The Rick and Morty</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,16 +31,17 @@
           </div>
         </div>
       </nav>
-
-      Pages
-      <select name="pagina" id="pagina" onchange="apiRickPersonajes(this.value)">
-        <script>
-            for (let i = 1; i <= 42; i++) {
-                document.write(`<option value="${i}">${i}</option>`);
-            }
-        </script>
-    </select>
-
+      
+      <button class="btn btn-danger" onclick="apiRickPersonajes(this.value)">Ver Personajes</button>
+      <select name="pagina"  onchange="apiRickPersonajes(this.value)">
+          <script>
+              for (let i = 1; i <= 42; i++) {
+                  document.write(`<option value="${i}">${i}</option>`);
+              }
+          </script>
+      </select>
+      <br>
+      <br>
     <div id="resultado"></div>
 
     <script src="/assets/js/main.Js"></script>
