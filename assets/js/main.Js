@@ -8,7 +8,7 @@ const apiRickPersonajes = async (pagina) =>{
     data.results.map(item=>{
         divItem = document.createElement('div')
         divItem.innerHTML = `
-        <div class="cards" id= "ocultar">
+        <div class="cards">
             <img src="${item.image}" class="card-image" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5>
